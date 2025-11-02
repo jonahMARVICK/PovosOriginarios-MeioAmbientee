@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --primary-color: #5a4a3a;
+    --secondary-color: #c7b89d;
+    --background-color: #f5f0e1;
+    --text-color: #3d352a;
+    --card-bg-color: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.678);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3d352a;
+    transform: scale(1.05);
+}
+
+#suspects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.suspect-card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.suspect-description {
+    font-size: 0.9em;
+    padding: 0 10px 10px 10px;
+    color: #555;
+    text-align: justify;
+}
+
+
+.suspect-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.suspect-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.suspect-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#form-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#suspect-img-header {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+#investigation-form {
+    text-align: left;
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+#investigation-form input, #investigation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    margin-top: 10px;
+    box-sizing: border-box; 
+}
+
+#investigation-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+.report-container {
+    text-align: left;
+    background: var(--card-bg-color);
+    border: 10px solid var(--secondary-color);
+}
+
+#final-report {
+    padding: 20px;
+    border: 2px dashed var(--primary-color);
+}
+
+#final-report h2, #final-report h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+#final-report p {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap; 
+}
+
+#print-btn, #restart-btn {
+    margin-right: 15px;
+}

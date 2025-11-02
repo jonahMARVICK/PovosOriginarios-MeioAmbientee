@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desequilibrios no meio Ambiente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <h1>Apresentação sobre estudo de casos</h1>
+            <p>Estude e Relacione os casos e seus efeitos ao erros ambientais</p>
+            <p>Elabore suas conclusões em um relatório e salve o pdf para auxiliar na apresentação</p>
+            <button id="start-btn">Escolher o Caso</button>
+        </div>
+    </div>
+
+    <div id="selection-screen" class="screen">
+        <div class="container">
+            <h2>Selecione um Caso para Elaborar a Apresentação</h2>
+            <div id="suspects-grid">
+                </div>
+        </div>
+    </div>
+
+    <div id="investigation-screen" class="screen">
+        <div class="container">
+            <div id="form-header">
+                <img id="suspect-img-header" src="" alt="Foto do Suspeito">
+                <h2 id="suspect-name-header"></h2>
+            </div>
+            <form id="investigation-form">
+                <div class="form-section">
+                    <h3>Grupo</h3>
+                    <input type="text" id="team-name" placeholder="Nome do Grupo" required>
+                    <textarea id="suspect-origin" placeholder="Alunos" required></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Caso</h3>
+                    <input type="text" id="team-name" placeholder="Nome do Grupo" required>
+                    <textarea id="suspect-origin" placeholder="Alunos" required></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Relatório</h3>
+                    <textarea id="impact-report" placeholder="Impacto Ecológico e Econômico: Quais os principais desequilíbrios e prejuízos causados?" required></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Consirderações Finais</h3>
+                    <textarea id="mitigation-plan" placeholder="Soluções: O que já está sendo feito e quais soluções sua equipe propõe?" required></textarea>
+                </div>
+
+                <button type="submit">Gerar Relatório Final</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="report-screen" class="screen">
+        <div class="container report-container">
+            <div id="final-report">
+                </div>
+            <button id="print-btn">Imprimir / Salvar como PDF</button>
+            <button id="restart-btn">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
