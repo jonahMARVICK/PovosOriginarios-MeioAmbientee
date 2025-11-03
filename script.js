@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function selectSuspect(suspectId) {
         currentSuspect = suspects.find(s => s.id === suspectId);
         document.getElementById('suspect-img-header').src = currentSuspect.image;
-        document.getElementById('suspect-name-header').innerHTML = `Ficha de Investigação: <span>${currentSuspect.name}</span>`;
+        document.getElementById('suspect-name-header').innerHTML = `Estudo do caso: <span>${currentSuspect.name}</span>`;
+        document.getElementById('suspect-description').textContent = currentSuspect.description;
         investigationForm.reset();
         showScreen('investigation-screen');
     }
@@ -70,20 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = {
             team: document.getElementById('team-name').value,
-            origin: document.getElementById('suspect-description').value,
             impact: document.getElementById('impact-report').value,
             mitigation: document.getElementById('mitigation-plan').value
         };
 
         finalReportContainer.innerHTML = `
-            <h2>RELATÓRIO CONFIDENCIAL</h2>
-            <p><strong>CASO:</strong>  ${currentSuspect.description} (${currentSuspect.description})</p>
-            <p><strong>ALUNOS DO GRUPO:</strong> ${formData.team}</p>
+            <h2>Elaboração para Apresentação</h2>
+            <p><strong>DESCRIÇÃO:</strong> ${currentSuspect.description}</p>
+            <p><strong>ALUNOS:</strong> ${formData.team}</p>
 
-            <h3>RELATÓRIO DE IMPACTO</h3>
+            <h3>Reltório</h3>
             <p>${formData.impact}</p>
 
-            <h3>PLANO DE MITIGAÇÃO PROPOSTO</h3>
+            <h3>Considerações Finais</h3>
             <p>${formData.mitigation}</p>
         `;
         showScreen('report-screen');

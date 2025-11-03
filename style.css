@@ -2,10 +2,10 @@
 
 :root {
     --primary-color: #5a4a3a;
-    --secondary-color: #c7b89d;
-    --background-color: #f5f0e1;
+    --secondary-color: #b1ca95;
+    --background-color: #0f4b00;
     --text-color: #3d352a;
-    --card-bg-color: #ffffff;
+    --card-bg-color: #d8b874ab;
 }
 
 body {
@@ -25,7 +25,7 @@ h1, h2, h3 {
 .container {
     max-width: 900px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.678);
+    background: rgba(209, 184, 137, 0.795);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -73,12 +73,14 @@ button:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.suspect-description {
-    font-size: 0.9em;
-    padding: 0 10px 10px 10px;
-    color: #555;
-    text-align: justify;
+.case-description {
+    background-color: #aadd68;
+    border-left: 4px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
 }
+
 
 
 .suspect-card:hover {
@@ -124,11 +126,18 @@ button:hover {
     margin-bottom: 25px;
 }
 
+#investigation-form input::placeholder,
+#investigation-form textarea::placeholder {
+    color: #3a3027;
+    opacity: 1;
+}
+
 #investigation-form input, #investigation-form textarea {
     width: 100%;
     padding: 12px;
+    background-color: #fde2afe0;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #bd9f4cb9;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     margin-top: 10px;
