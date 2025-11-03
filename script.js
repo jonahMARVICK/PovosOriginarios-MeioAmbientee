@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>DESCRIÇÃO:</strong> ${currentSuspect.description}</p>
             <p><strong>ALUNOS:</strong> ${formData.team}</p>
 
-            <h3>Reltório</h3>
+            <h3>Relatório</h3>
             <p>${formData.impact}</p>
 
             <h3>Considerações Finais</h3>

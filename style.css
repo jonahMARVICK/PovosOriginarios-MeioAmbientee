@@ -157,6 +157,7 @@ button:hover {
 }
 
 #final-report {
+    color: #884800;
     padding: 20px;
     border: 2px dashed var(--primary-color);
 }
@@ -167,7 +168,7 @@ button:hover {
     padding-bottom: 5px;
 }
 #final-report p {
-    background-color: var(--background-color);
+    background-color: #ffff;
     padding: 10px;
     border-radius: 5px;
     white-space: pre-wrap; 
